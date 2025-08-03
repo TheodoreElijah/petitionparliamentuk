@@ -4,7 +4,7 @@ import streamlit as st
 import json
 
 # Google Apps Script URL for petition data
-PETITION_DATA_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjq2GMfNQqj05NuAL8ct9CmyhKzUMqRXpwGLObp4J7uHZxaL_tOdSWk3dXouM40aOqOtRFnSQpzsBxoj88pnG7w-HHGC_FuoylS9WT4wWeibqs2ZRjkVq5zZ4FXrRknnBtSJqw-225kDEMqJjJU4ygtaOd2z1DI1YrbCiKWlqFa3hmJEBjH2OMai91kVD-DmrIeRd-chyXB-3TIdI6wxcYt8_e2OTBfNrH83ThCkipEFNvAml9QTTA1PpnwzoYaMlg137PrdPJmu4W4a5pVfH2H0poshw&lib=Mnv4iSODQPAVnoyklcKaVOSTmmKHkEHEC"
+PETITION_DATA_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjpBMhTA3z5r9d4tIE8bXH8_yoJx1JXDdPFBLY1Y1ZMzFpcE_5QrMptlGIyxwTvKepnxf_q9zS6XES-Micm_xN263CdIXLeyqV6k1uh0yjVkRfCzw7AU3r_KVgHtIvhNuMSxc71QP1omNFoAgUN1g11mlSbRbdzsGScYJ-tItwbMz4XvhggUheeqiDsLKUSgAsa8KjorD83Guv978RzoGghWJ1xr67KrySu4vgLfsNCF7jvhFOA_fR62WlQVUqCO3V0uh0xRYGoZFpqS1liFzuqsi2K9w&lib=Mnv4iSODQPAVnoyklcKaVOSTmmKHkEHEC"
 
 def fetch_petition_data():
     """
@@ -18,8 +18,8 @@ def fetch_petition_data():
                          - Signatures Count: Number of signatures
     """
     try:
-        # Make request to the Google Apps Script endpoint
-        response = requests.get(PETITION_DATA_URL, timeout=30)
+        # Make request to the Google Apps Script endpoint with redirect following
+        response = requests.get(PETITION_DATA_URL, timeout=30, allow_redirects=True)
         response.raise_for_status()
         
         # Parse JSON response
