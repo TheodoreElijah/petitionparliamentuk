@@ -71,5 +71,7 @@ An interactive web app that lets users search UK petitions using natural languag
   - "What are the most popular petition topics?"
   - View AI-powered insights and interactive visualizations
 
-Research & Development Summary URL: https://miro.com/app/board/uXjVJXqf3EI=/?share_link_id=634162919138
-Web App URL: https://unboxed-petitionparliamentuk.replit.app
+- Research & Development Summary URL:
+  - https://miro.com/app/board/uXjVJXqf3EI=/?share_link_id=634162919138
+- Web App URL:
+  - https://unboxed-petitionparliamentuk.replit.app
